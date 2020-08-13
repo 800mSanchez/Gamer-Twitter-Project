@@ -1,11 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import './reset.css';
+import {Switch, Route} from 'react-router-dom';
+import Login from './components/Login';
+import Profile from './components/Profile';
+import FrontPage from './components/FrontPage';
+import Header from './components/Header';
 
 class App extends React.Component {
   render(){
     return <div>
-      Good Morning!
+      <Header/>
+      <Switch>
+        <Route exact path="/" component={Login}/>
+        <Route path="/front_page" component={FrontPage}/>
+        <Route path="/profile" component={Profile}/>
+      </Switch>
     </div>
   }
 }
