@@ -1,12 +1,14 @@
 import React from 'react';
 import "./Header.css";
-
+import  Logo from './G-removebg-preview.png';
+/* import Profile from './Profile';
+ */
 const Header = () => {
     return <header>
         <div className='logo-container'>
-            <img alt='logo' src="https://www.clipartmax.com/png/middle/101-1015647_i-made-yall-a-snoo-reddit-logo-png.png" className='logo'/>
+            <img alt='logo' src={Logo} className='logo'/>
         </div>
-        <h1>Schmeddit</h1> 
+        <h1>Gamer</h1> 
             <nav className='navigation'>
                 <ul>
                     <li>Profile</li>

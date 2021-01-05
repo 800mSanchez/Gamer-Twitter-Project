@@ -10,7 +10,7 @@
   height: 300px;
   width: 300px;
   border-radius: 10%;
-  background-color: orange;
+  background-color: #c5b358;
   border: 4px black;
   display: flex;
   flex-direction: column;
@@ -27,7 +27,7 @@ header {
   height: 15vh;
   display: flex;
   justify-content: space-evenly;
-  background-color: orange;
+  background-color: #c5b358;
   align-items: center;
 }
 
