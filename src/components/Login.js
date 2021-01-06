@@ -43,7 +43,7 @@ class Login extends React.Component {
         const {email, password} = this.state;
         axios.post('/auth/register', {email, password}).then(res => {
             this.props.loginUser(res.data);
-            this.props.history.push('front_page');
+            this.props.history.push('/front_page');
         }).catch(err => {
             console.log(err);
             alert('Register Failed')
