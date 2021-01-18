@@ -6,18 +6,31 @@ class FrontPage extends React.Component  {
     constructor(){
         super();
         this.state = {
-            body: '',
-            img: ''
+            body: "",
+            img: ""
         }
+        /* this.getPost = this.getPost.bind(this) */
     }
+/* componentDidMount(){
+    this.getPost()
+} */
+
+/* getPost = () => {
+    const {body,img} = this.state;
+    axios.get("/user/view", {body,img}).then(res => {
+        this.setState({
+            body: res.data
+        })
+    }).catch(err => console.log(err))
+} */
 
 addPost = () => {
     const {body, img} = this.state;
-    axios.post('/user/post', {body, img})
+    axios.post("/user/post", {body, img})
     .then( res => {
         this.setState({
-            body: '',
-            img: ''
+            body: "",
+            img: ""
         })
     }).catch(err => console.log(err))
 }

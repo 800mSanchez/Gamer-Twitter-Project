@@ -33,5 +33,6 @@ app.get('/auth/logout', auth.logout);
 app.get('/auth/user', auth.getUser);
 
 app.post('/user/post', post.addPost);
+app.get('/user/view', post.getPost);
 
 app.listen(SERVER_PORT, ()=> console.log(`Connected to port ${SERVER_PORT}⚓`))

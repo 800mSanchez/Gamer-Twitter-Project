@@ -1,4 +1,4 @@
 INSERT INTO posts (body, img)
-VALUES ($1, $2)
+VALUES ($1, $2);
 
-SELECT * FROM posts
+SELECT * FROM posts;
