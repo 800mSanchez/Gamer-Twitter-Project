@@ -40,8 +40,8 @@ class Login extends React.Component {
     }
 
     register = () => {
-        const {email, password} = this.state;
-        axios.post('/auth/register', {email, password}).then(res => {
+        const {firstName, lastName, email, password} = this.state;
+        axios.post('/auth/register', {firstName, lastName, email, password}).then(res => {
             this.props.loginUser(res.data);
             this.props.history.push('/front_page');
         }).catch(err => {
