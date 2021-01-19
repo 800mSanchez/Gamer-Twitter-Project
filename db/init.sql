@@ -12,7 +12,7 @@ CREATE TABLE posts(
     body TEXT,
     img TEXT,
     /* post_karma_score INT, */
-    user_id INT REFERENCES users(user_id)
+    /* user_id INT REFERENCES users(user_id) */
 );
 
 CREATE TABLE comments (

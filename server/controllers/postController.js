@@ -2,9 +2,9 @@ module.exports = {
 
 getPost: (req,res) => {
     const db = req.app.get("db");
-    db.get_posts().then(post => {
+    db.get_posts().then((post) => {
         res.status(200).send(post)
-    }).catch (err => console.log(err));
+    }).catch(err => console.log(err));
 },    
 
 addPost: (req, res) => {

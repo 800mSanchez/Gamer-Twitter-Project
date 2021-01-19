@@ -6,27 +6,43 @@ class FrontPage extends React.Component  {
     constructor(){
         super();
         this.state = {
-            body: "",
-            img: ""
+            body: '',
+            img: ''
         }
         /* this.getPost = this.getPost.bind(this) */
     }
-/* componentDidMount(){
+componentDidMount(){
     this.getPost()
-} */
+}
 
-/* getPost = () => {
+getPost = () => {
     const {body,img} = this.state;
-    axios.get("/user/view", {body,img}).then(res => {
+    axios.get('/user/view', {body,img}).then(res => {
         this.setState({
             body: res.data
         })
     }).catch(err => console.log(err))
-} */
+}
 
-addPost = () => {
+changeHandler = e => {
+    this.setState({
+        [e.target.name]: e.target.value
+    })
+}
+
+submitHandler = e => {
+    e.preventDefault();
+    console.log(this.state);
+    axios.post('/user/post', this.state).then(res => {
+        console.log(res)
+    }).catch(err => {
+        console.log(err)
+    })
+}
+
+addPost = (post_id) => {
     const {body, img} = this.state;
-    axios.post("/user/post", {body, img})
+    axios.post("/user/post", {post_id,body, img})
     .then( res => {
         this.setState({
             body: "",
